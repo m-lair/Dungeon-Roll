@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
+    @Binding var char: Character
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section(header: Text("Character Info")) {
+                HStack {
+                    Label("\(char.name)", systemImage: "person")
+                    Spacer()
+                    Text("Lvl: \(char.level)")
+                }
+                .accessibilityElement(children: .combine)
+            }
+            Section(header: Text("Stats")) {
+                ForEach(char.attrbs) { attrb in
+                    HStack{
+                        Text(String(attrb.name))
+                        //Label(attrb.name)
+                        Spacer()
+                        Text(String(attrb.val))
+                    }
+                }
+            }
+            Section(header: Text("History")) {
+            }
+        }
+        
     }
 }
 
-#Preview {
-    CharacterDetailView()
+struct CharacterDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        CharacterDetailView(char: .constant(Character.sampleData[0]))
+    }
 }

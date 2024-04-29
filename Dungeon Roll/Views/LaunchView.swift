@@ -8,45 +8,53 @@
 import SwiftUI
 
 struct LaunchView: View {
-    let chars: [Character]
+    
+    @Binding var chars: [Character]
+    
     var body: some View {
-        
-        
-        
-        Spacer()
-        
-        VStack {
-            Text("DUNGEON ROLL")
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Dungeon Roll")
                 .font(.title)
-                .fontDesign(.rounded)
-                .padding()
-            
-            Spacer()
-            ForEach(chars) {char in
-                Button(action:{
+            NavigationStack{
+                //List{
+                /*Text("Characters")
+                 .fontWeight(.bold)
+                 .font(.title)
+                 .fontDesign(.rounded)
+                 .padding()
+                 */
+                List($chars){$char in
+                    NavigationLink(destination: CharacterDetailView(char: $char)
+                    ){
+                        CharView(char: char)
+                    }
                     
-                }){
-                    CharView(char: char)
                 }
-                
+                .toolbar {
+                    Button(action: {
+                        
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
             }
-            Spacer()
-            Button(action: {
-                
-            }, label: {
-                Text("New Character")
-            })
-            .padding()
-        }
-        
-        
-    }
-    
-    
-    struct LaunchView_Previews: PreviewProvider {
-        static var previews: some View {
-            LaunchView(chars: Character.sampleData)
+            
         }
     }
 }
+
+    
+
+    
+
+        
+        
+
+
+    
+struct LaunchView_Previews: PreviewProvider {
+        static var previews: some View {
+            LaunchView(chars: .constant(Character.sampleData))
+        }
+    }
+
