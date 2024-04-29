@@ -27,13 +27,14 @@ extension Character {
         let id:UUID
         var name: String
         var val: Int
+        //var effect
         
         init(id: UUID=UUID(), name: String, val: Int){
             self.id = id
             self.name = name
             self.val = val
         /*
-         could do it this way orr
+         could do it this way orr^^
         var dex:Int
         var cha:Int
         var con:Int
@@ -60,13 +61,32 @@ extension Character {
         [
             Character(name:"dookie", 
                       level: 8,
-                      attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 10)),
-            Character(name:"pookie", 
+                      attrbs: [Attribute(name: "Dex", val: 8),
+                               Attribute(name: "cha", val: 10),
+                               Attribute(name: "con", val: 12),
+                               Attribute(name: "str", val: 16),
+                               Attribute(name: "int", val: 6),
+                               Attribute(name: "wis", val: 10)]),
+                      //attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 10)),
+            Character(name:"pookie",
                       level: 2,
-                      attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 12)),
-            Character(name:"wookie", 
+                      attrbs: [Attribute(name: "Dex", val: 8),
+                               Attribute(name: "cha", val: 2),
+                               Attribute(name: "con", val: 4),
+                               Attribute(name: "str", val: 5),
+                               Attribute(name: "int", val: 6),
+                               Attribute(name: "wis", val: 10)]),
+                      //attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 12)),
+            Character(name:"wookie",
                       level: 12,
-                      attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 12))
+                      attrbs: [Attribute(name: "Dex", val: 6),
+                               Attribute(name: "cha", val: 9),
+                               Attribute(name: "con", val: 10),
+                               Attribute(name: "str", val: 16),
+                               Attribute(name: "int", val: 6),
+                               Attribute(name: "wis", val: 10)])
+                      //attrbs: Attributes(dex: 8, cha: 10, con: 12, str: 16, int: 6, wis: 12))
         ]
     }
 }
+
