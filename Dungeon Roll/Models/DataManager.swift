@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Character: Identifiable {
+class Character: Identifiable {
     let id: UUID
     var name: String
-    var level: Int
+    @Published var level: Int
     var attrbs: [String : String]
     
     init(id: UUID = UUID(), name: String, level: Int, attrbs: [String : String]) {
@@ -20,6 +20,10 @@ struct Character: Identifiable {
         self.level = level
         self.attrbs = attrbs
     }
+}
+
+class Attributes:Character{
+    
 }
 
 extension Character {
