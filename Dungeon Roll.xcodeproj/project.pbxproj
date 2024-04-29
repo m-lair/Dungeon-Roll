@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2CF006C12BDF0D3800941E8B /* Dungeon_RollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006C02BDF0D3800941E8B /* Dungeon_RollApp.swift */; };
-		2CF006C32BDF0D3800941E8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006C22BDF0D3800941E8B /* ContentView.swift */; };
+		2CF006C32BDF0D3800941E8B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006C22BDF0D3800941E8B /* LaunchView.swift */; };
 		2CF006C52BDF0D3900941E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF006C42BDF0D3900941E8B /* Assets.xcassets */; };
 		2CF006C82BDF0D3900941E8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF006C72BDF0D3900941E8B /* Preview Assets.xcassets */; };
 		2CF006D22BDF0D3900941E8B /* Dungeon_RollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006D12BDF0D3900941E8B /* Dungeon_RollTests.swift */; };
 		2CF006DC2BDF0D3900941E8B /* Dungeon_RollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006DB2BDF0D3900941E8B /* Dungeon_RollUITests.swift */; };
 		2CF006DE2BDF0D3900941E8B /* Dungeon_RollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006DD2BDF0D3900941E8B /* Dungeon_RollUITestsLaunchTests.swift */; };
+		2CF006EB2BDF165C00941E8B /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006EA2BDF165C00941E8B /* CharacterView.swift */; };
+		2CF006ED2BDF16B200941E8B /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006EC2BDF16B200941E8B /* NewCharacterView.swift */; };
+		2CF006EF2BDF16D900941E8B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006EE2BDF16D900941E8B /* GameView.swift */; };
+		2CF006F12BDF1A3B00941E8B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006F02BDF1A3B00941E8B /* DataManager.swift */; };
+		2CF006F32BDF20EA00941E8B /* CharViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		2CF006BD2BDF0D3800941E8B /* Dungeon Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Roll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF006C02BDF0D3800941E8B /* Dungeon_RollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon_RollApp.swift; sourceTree = "<group>"; };
-		2CF006C22BDF0D3800941E8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CF006C22BDF0D3800941E8B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		2CF006C42BDF0D3900941E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CF006C72BDF0D3900941E8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CF006CD2BDF0D3900941E8B /* Dungeon RollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon RollTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,11 @@
 		2CF006D72BDF0D3900941E8B /* Dungeon RollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon RollUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF006DB2BDF0D3900941E8B /* Dungeon_RollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon_RollUITests.swift; sourceTree = "<group>"; };
 		2CF006DD2BDF0D3900941E8B /* Dungeon_RollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon_RollUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2CF006EA2BDF165C00941E8B /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		2CF006EC2BDF16B200941E8B /* NewCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCharacterView.swift; sourceTree = "<group>"; };
+		2CF006EE2BDF16D900941E8B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		2CF006F02BDF1A3B00941E8B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				2CF006C02BDF0D3800941E8B /* Dungeon_RollApp.swift */,
-				2CF006C22BDF0D3800941E8B /* ContentView.swift */,
+				2CF006C22BDF0D3800941E8B /* LaunchView.swift */,
+				2CF006EA2BDF165C00941E8B /* CharacterView.swift */,
+				2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */,
+				2CF006F02BDF1A3B00941E8B /* DataManager.swift */,
+				2CF006EC2BDF16B200941E8B /* NewCharacterView.swift */,
+				2CF006EE2BDF16D900941E8B /* GameView.swift */,
 				2CF006C42BDF0D3900941E8B /* Assets.xcassets */,
 				2CF006C62BDF0D3900941E8B /* Preview Content */,
 			);
@@ -257,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF006C32BDF0D3800941E8B /* ContentView.swift in Sources */,
+				2CF006EB2BDF165C00941E8B /* CharacterView.swift in Sources */,
+				2CF006F32BDF20EA00941E8B /* CharViewHelper.swift in Sources */,
+				2CF006F12BDF1A3B00941E8B /* DataManager.swift in Sources */,
+				2CF006C32BDF0D3800941E8B /* LaunchView.swift in Sources */,
 				2CF006C12BDF0D3800941E8B /* Dungeon_RollApp.swift in Sources */,
+				2CF006ED2BDF16B200941E8B /* NewCharacterView.swift in Sources */,
+				2CF006EF2BDF16D900941E8B /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
