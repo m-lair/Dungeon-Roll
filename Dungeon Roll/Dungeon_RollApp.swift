@@ -11,7 +11,7 @@ import SwiftUI
 struct Dungeon_RollApp: App {
     var body: some Scene {
         WindowGroup {
-            LaunchView(chars: Character.sampleData)
+            LaunchView(chars: .constant(Character.sampleData))
         }
     }
 }

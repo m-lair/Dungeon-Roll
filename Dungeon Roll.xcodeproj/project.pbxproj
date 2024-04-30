@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		2CF006BD2BDF0D3800941E8B /* Dungeon Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Roll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF006C02BDF0D3800941E8B /* Dungeon_RollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon_RollApp.swift; sourceTree = "<group>"; };
-		2CF006C22BDF0D3800941E8B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		2CF006C22BDF0D3800941E8B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		2CF006C42BDF0D3900941E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CF006C72BDF0D3900941E8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CF006CD2BDF0D3900941E8B /* Dungeon RollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon RollTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,10 +153,10 @@
 			children = (
 				2CF006EA2BDF165C00941E8B /* CharacterView.swift */,
 				2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */,
+				2CF006FA2BE01FC100941E8B /* CharacterDetailView.swift */,
 				2CF006EC2BDF16B200941E8B /* NewCharacterView.swift */,
 				2CF006EE2BDF16D900941E8B /* GameView.swift */,
 				2CF006C22BDF0D3800941E8B /* LaunchView.swift */,
-				2CF006FA2BE01FC100941E8B /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

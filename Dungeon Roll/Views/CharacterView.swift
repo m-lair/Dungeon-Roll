@@ -18,7 +18,7 @@ struct CharacterView: View {
     }
 }
     
-    struct CharacterView_Previews: PreviewProvider {
+struct CharacterView_Previews: PreviewProvider {
         static var previews: some View {
             CharacterView(chars: Character.sampleData)
         }
