@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterView: View {
-    let chars: [Character]
+    @State var chars: [Character]
     var body: some View {
         
         List(chars){char in
@@ -20,6 +20,6 @@ struct CharacterView: View {
     
 struct CharacterView_Previews: PreviewProvider {
         static var previews: some View {
-            CharacterView(chars: Character.sampleData)
+            CharacterView(chars:Character.sampleData)
         }
     }

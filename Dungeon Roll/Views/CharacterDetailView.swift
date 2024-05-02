@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CharacterDetailView: View {
     @Binding var char: Character
+    
     var body: some View {
         List {
             Section(header: Text("Character Info")) {
