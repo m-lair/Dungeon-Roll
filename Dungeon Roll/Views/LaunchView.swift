@@ -9,13 +9,13 @@ import SwiftUI
 
 struct LaunchView: View {
     
-    @Binding var chars: [Character]
-    
+    var chars: [Character]
     var body: some View {
         VStack{
             Text("Dungeon Roll")
                 .font(.title)
-            NavigationStack{
+                .padding()
+            CharacterView(chars: chars)
                 //List{
                 /*Text("Characters")
                  .fontWeight(.bold)
@@ -23,25 +23,12 @@ struct LaunchView: View {
                  .fontDesign(.rounded)
                  .padding()
                  */
-                List($chars){$char in
-                    NavigationLink(destination: CharacterDetailView(char: $char)
-                    ){
-                        CharView(char: char)
-                    }
-                    
-                }
-                .toolbar {
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                }
-            }
-            
+            Spacer()
         }
+        
     }
 }
+
 
     
 
@@ -54,7 +41,7 @@ struct LaunchView: View {
     
 struct LaunchView_Previews: PreviewProvider {
         static var previews: some View {
-            LaunchView(chars: .constant(Character.sampleData))
+            LaunchView(chars: Character.sampleData)
         }
     }
 

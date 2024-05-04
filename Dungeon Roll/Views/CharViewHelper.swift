@@ -10,34 +10,96 @@ import Foundation
 
 import SwiftUI
 
-struct CharView: View {
+struct CardView: View {
     let char: Character
+    let width: CGFloat = 100
+    let height: CGFloat = 100
+     
     var body: some View {
-        
-        HStack{
-            Text(char.name)
-                .font(.headline)
-                .accessibilityAddTraits(.isHeader)
-                .textCase(.uppercase)
-                .padding()
-               
-            Spacer()
-           
-            Text("Lvl: \(char.level)")
-                .padding()
-                    //display stat data??
-                    //should it even be a map?
-                    //Text((char.attrbs))
-                    //display race/class
+        VStack(alignment: .leading) {
+            HStack{
+                Label("\(char.name)", systemImage: "person")
+                    .font(.title)
+                    .accessibilityAddTraits(.isHeader)
+                    .textCase(.uppercase)
+                    .padding(.leading)
+                
+                
+                
+                Spacer()
+                
+                Text("Lvl: \(char.level)")
+                    .fontWeight(.bold)
+                    .padding()
+                    .font(.title)
+                
+                //display stat data??
+                //should it even be a map?
+                //Text((char.attrbs))
+                //display race/class
+            }
+            Text("Race:")
+                .font(.subheadline)
+                .padding(.leading)
+            
+            Divider()
+            Text("abilities/items:")
+                .font(.subheadline)
+                .padding(.leading)
+            
+                
+                VStack(alignment: .leading){
+                    Spacer()
+                    HStack(){
+                        Spacer()
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Spacer()
+                    }
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Rectangle()
+                            .frame(width: width, height: height)
+                        Spacer()
+                        
+                    }
+                    Spacer()
+                    
+                }
+                
+                
+                
+                
+            
+            
+            
+            
+            
         }
+        
+        
     }
+        
 }
 
 struct NewCharacter: View {
+     
     @State var name = ""
     @State var level: Int = 1
+     
     let attrbNames = ["Dexterity", "Charisma", "Strength", "Wisdom", "Intelligence", "Constitution"]
+     
     var attrbs: [Character.Attribute] = []
+     
     var body: some View{
         
         NavigationView {
@@ -57,7 +119,9 @@ struct NewCharacter: View {
                          Section(header: Text("Attribute Info")) {
                               VStack{
                                    ForEach(0..<attrbNames.count, id: \.self) {name in
-                                        Text("\(attrbNames[name])")
+                                        HStack{
+                                             
+                                        }
                                         
                                    }
                               }
@@ -78,9 +142,9 @@ struct NewCharacter: View {
 struct CharView_Previews: PreviewProvider {
     static var char = Character.sampleData[0]
     static var previews: some View {
-        //CharView(char: char)
-        //    .previewLayout(.fixed(width: 400, height: 60))
-        NewCharacter()
+        CardView(char: char)
+           .previewLayout(.fixed(width: 400, height: 400))
+        //NewCharacter()
     }
 }
 
