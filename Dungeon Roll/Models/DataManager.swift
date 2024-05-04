@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Character: Identifiable {
+
+class Character: ObservableObject, Identifiable{
     let id: UUID
     var name: String
     @Published var level: Int
@@ -19,6 +20,16 @@ class Character: Identifiable {
         self.name = name
         self.level = level
         self.attrbs = attrbs
+    }
+    
+    func addAttribute(name: String, value: Int){
+       attrbs.append(Attribute(name: name, val: value))
+    }
+    
+    func removeAtrribute(name: String){
+        for attrb in attrbs{
+            attrbs.remove(at: attrb.id.hashValue)
+        }
     }
 }
 
@@ -33,6 +44,8 @@ extension Character {
             self.id = id
             self.name = name
             self.val = val
+        
+        
         /*
          could do it this way orr^^
         var dex:Int

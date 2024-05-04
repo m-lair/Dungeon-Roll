@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct CharacterView: View {
+    let rows = [
+        GridItem(.fixed(100))
+    ]
     @State var chars: [Character]
     var body: some View {
-        
-        List(chars){char in
-            CharView(char: char)
+        ScrollView(.horizontal){
+            LazyHGrid(rows: rows){
+                ForEach($chars){$char in
+                    CardView(char: char)
+                        .frame(width: 350, height: 350)
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
+                    
+                    
+                }
+                
+            }
+            .padding()
         }
         
     }
+    
 }
+
     
 struct CharacterView_Previews: PreviewProvider {
         static var previews: some View {

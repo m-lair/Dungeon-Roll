@@ -54,7 +54,7 @@
 		2CF006EC2BDF16B200941E8B /* NewCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCharacterView.swift; sourceTree = "<group>"; };
 		2CF006EE2BDF16D900941E8B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		2CF006F02BDF1A3B00941E8B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = CharViewHelper.swift; sourceTree = "<group>"; tabWidth = 2; wrapsLines = 1; };
+		2CF006F22BDF20EA00941E8B /* CharViewHelper.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CharViewHelper.swift; sourceTree = "<group>"; tabWidth = 2; wrapsLines = 1; };
 		2CF006FA2BE01FC100941E8B /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
