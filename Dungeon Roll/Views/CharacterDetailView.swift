@@ -21,12 +21,12 @@ struct CharacterDetailView: View {
                 .accessibilityElement(children: .combine)
             }
             Section(header: Text("Stats")) {
-                ForEach(char.attrbs) { attrb in
+                ForEach(char.attrbs) {pair in
                     HStack{
-                        Text(String(attrb.name))
+                        Text("\(pair.name)")
                         //Label(attrb.name)
                         Spacer()
-                        Text(String(attrb.val))
+                        Text(String(pair.value))
                     }
                 }
             }

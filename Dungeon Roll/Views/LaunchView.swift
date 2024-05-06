@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct LaunchView: View {
-    
-    var chars: [Character]
+    @Environment(\.modelContext) var context
+    @State private var isShowingCharSheet = false
+    @Query(sort: \Character.id) var chars: [Character]
     var body: some View {
         VStack{
             Text("Dungeon Roll")
@@ -24,8 +27,14 @@ struct LaunchView: View {
                  .padding()
                  */
             Spacer()
+            Button("New Character"){
+                isShowingCharSheet = true
+            }
+            
         }
-        
+        .sheet(isPresented: $isShowingCharSheet, content: {
+            NewCharacterView()
+        })
     }
 }
 
@@ -41,7 +50,7 @@ struct LaunchView: View {
     
 struct LaunchView_Previews: PreviewProvider {
         static var previews: some View {
-            LaunchView(chars: Character.sampleData)
+            LaunchView()
         }
     }
 

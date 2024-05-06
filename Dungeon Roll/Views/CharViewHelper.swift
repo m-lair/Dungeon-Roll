@@ -52,8 +52,24 @@ struct CardView: View {
                     Spacer()
                     HStack(){
                         Spacer()
+                        ZStack{
                         Rectangle()
                             .frame(width: width, height: height)
+                            VStack{
+                                Text("\(char.attrbs.filter({$0.name == "Dex"}))")
+                                    .font(.title2)
+                                    .colorInvert()
+                                Spacer()
+                                Text("13")
+                                    .font(.title)
+                                    .colorInvert()
+                                Spacer()
+                            }
+                            .frame(width: width, height: height)
+                            
+                            
+                            
+                        }
                         Rectangle()
                             .frame(width: width, height: height)
                         Rectangle()
@@ -91,54 +107,6 @@ struct CardView: View {
         
 }
 
-struct NewCharacter: View {
-     
-    @State var name = ""
-    @State var level: Int = 1
-     
-    let attrbNames = ["Dexterity", "Charisma", "Strength", "Wisdom", "Intelligence", "Constitution"]
-     
-    var attrbs: [Character.Attribute] = []
-     
-    var body: some View{
-        
-        NavigationView {
-                    Form(content: {
-                         Section(header: Text("Basic Info")) {
-                              HStack{
-                                   TextField("Name", text: $name)
-                                   Picker("Lvl:", selection: $level){
-                                        ForEach(1..<21) {
-                                             Text("\($0)")
-                                        }
-                                   }
-                                   .frame(width: 80.0, height: 10.0)
-                              }
-                              // Secure field
-                         }
-                         Section(header: Text("Attribute Info")) {
-                              VStack{
-                                   ForEach(0..<attrbNames.count, id: \.self) {name in
-                                        HStack{
-                                             
-                                        }
-                                        
-                                   }
-                              }
-                        
-                        }
-                        Section {
-                            // Button
-                            Button("Save") {
-                                // DO SOMETHING
-                            }
-                        }
-                    })
-                    .navigationBarTitle("New Character")
-                }
-            }
-        }
-
 struct CharView_Previews: PreviewProvider {
     static var char = Character.sampleData[0]
     static var previews: some View {
@@ -148,6 +116,3 @@ struct CharView_Previews: PreviewProvider {
     }
 }
 
-func validForm(form: NewCharacter){
-    
-}
